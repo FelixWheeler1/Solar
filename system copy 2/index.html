@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title> Solar System </title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%
+    }
+  </style>
+</head>
+
+<body>
+  <audio id="hoverSound" src="./sounds/hover.mp3"></audio>
+  <audio id="selectSound" src="./sounds/select.mp3"></audio>
+
+  <link href="./styles.css" rel="stylesheet" />
+
+<div id="planet-menu">
+    <ul>
+        <li onclick="selectSound.play() ; selectPlanet('mercury',17)">Mercury</li>
+        <li onclick="selectSound.play() ;selectPlanet('venus',12)">Venus</li>
+        <li onclick="selectSound.play() ;selectPlanet('earth',12)">Earth</li>
+        <li onclick="selectSound.play() ;selectPlanet('mars',20)">Mars</li>
+        <li onclick="selectSound.play() ;selectPlanet('jupiter',5)">Jupiter</li>
+        <li onclick="selectSound.play() ;selectPlanet('saturn',6)">Saturn</li>
+        <li onclick="selectSound.play() ;selectPlanet('uranus',28)">Uranus</li>
+        <li onclick="selectSound.play() ;selectPlanet('neptune',30)">Neptune</li>
+        <!-- <li onclick="selectSound.play() ;resetSun()">Return</li> -->
+    </ul>
+</div>
+<div id="return-menu">
+  <ul>
+      <li onclick="selectSound.play() ;resetSun()">Return</li>
+  </ul>
+</div>
+
+  <div id="earthInfo">
+    <strong>Earth</strong>
+    <div id="facts">
+      <ul>
+        <li>
+          <h2>Diameter:</h2> 12 756 KM
+        </li>
+        <li>
+          <h2>Mass:</h2> 6 X 10<sup>24</sup> KG
+        </li>
+        <li>
+          <h2>Rotation period:</h2> 23H 56M
+        </li>
+        <li>
+          <h2>Solar orbit:</h2> 1 year
+        </li>
+        <li>
+          <h2>Gravity:</h2> 9.8 M/S<sup>2</sup>
+        </li>
+        <li>
+          <h2> Surface temperature:</h2> 15 C
+        </li>
+      </ul>
+    </div>
+    <iframe src="planetInfo/earthInfo.txt"></iframe>
+  </div>
+
+  <div id="marsInfo">
+    <strong>Mars</strong>
+    <div id="facts">
+      <ul>
+        <li>
+          <h2>Diameter:</h2> 6 792 KM
+        </li>
+        <li>
+          <h2>Mass:</h2> 6.4 X 10<sup>23</sup> KG
+        </li>
+        <li>
+          <h2>Rotation period:</h2> 1.03 days
+        </li>
+        <li>
+          <h2>Solar orbit:</h2> 1.88 year
+        </li>
+        <li>
+          <h2>Gravity:</h2> 3.7 M/S<sup>2</sup>
+        </li>
+        <li> <h2>Surface temperature:</h2> -63 C</li>
+      </ul>
+    </div>
+    <iframe src="planetInfo/marsInfo.txt"></iframe>
+
+
+
+  </div>
+
+  <div id="mercuryInfo">
+    <strong>Mercury</strong>
+    <div id="facts">
+      <ul>
+        <li>
+          <h2>Diameter:</h2> 4 879 KM
+        </li>
+        <li>
+          <h2>Mass:</h2> 3.3 X 10<sup>23</sup> KG
+        </li>
+        <li>
+          <h2>Rotation period:</h2> 59 days
+        </li>
+        <li>
+          <h2>Solar orbit:</h2> 88 days
+        </li>
+        <li>
+          <h2>Gravity:</h2> 3.7 M/S<sup>2</sup>
+        </li>
+        <li>
+          <h2>Surface temperature:</h2> 167 C
+        </li>
+      </ul>
+    </div>
+    <iframe src="planetInfo/mercuryInfo.txt"></iframe>
+
+  </div>
+
+  <div id="venusInfo">
+    <strong>Venus</strong>
+    <div id="facts">
+      <ul>
+        <li>
+          <h2>Diameter:</h2> 12 104 KM
+        </li>
+        <li>
+          <h2>Mass:</h2> 4.9 X 10<sup>24</sup> KG
+        </li>
+        <li>
+          <h2>Rotation period:</h2> 243 days
+        </li>
+        <li>
+          <h2>Solar orbit:</h2> 225 days
+        </li>
+        <li>
+          <h2>Gravity:</h2> 8.9 M/S<sup>2</sup>
+        </li>
+        <li>
+          <h2>Surface temperature:</h2> 462 C
+        </li>
+      </ul>
+    </div>
+    <iframe src="planetInfo/venusInfo.txt"></iframe>
+
+  </div>
+
+  <div id="jupiterInfo">
+    <strong>Jupiter</strong>
+    <div id="facts">
+      <ul>
+        <li>
+          <h2>Diameter:</h2> 142 984 KM
+        </li>
+        <li>
+          <h2>Mass:</h2> 1.9 X 10<sup>27</sup> KG
+        </li>
+        <li>
+          <h2>Rotation period:</h2> 9H 55M
+        </li>
+        <li>
+          <h2>Solar orbit:</h2> 11.9 years
+        </li>
+        <li>
+          <h2>Gravity:</h2> 25 M/S<sup>2</sup>
+        </li>
+        <li>
+          <h2>Surface temperature:</h2> -120 C
+        </li>
+      </ul>
+    </div>
+    <iframe src="planetInfo/jupiterInfo.txt"></iframe>
+
+  </div>
+
+  <div id="saturnInfo">
+    <strong>Saturn</strong>
+    <div id="facts">
+      <ul>
+        <li>
+          <h2>Diameter:</h2> 120 536 KM
+        </li>
+        <li>
+          <h2>Mass:</h2> 5.7 X 10<sup>26</sup> KG
+        </li>
+        <li>
+          <h2>Rotation period:</h2> 10H 39M
+        </li>
+        <li>
+          <h2>Solar orbit:</h2> 29 years
+        </li>
+        <li>
+          <h2>Gravity:</h2> 10.4 M/S<sup>2</sup>
+        </li>
+        <li>
+          <h2>Surface temperature:</h2> -125 C
+        </li>
+      </ul>
+    </div>
+    <iframe src="planetInfo/saturnInfo.txt"></iframe>
+
+  </div>
+
+  <div id="uranusInfo">
+    <strong>Uranus</strong>
+    <div id="facts">
+      <ul>
+        <li>
+          <h2>Diameter:</h2> 51 118 KM
+        </li>
+        <li>
+          <h2>Mass:</h2> 8.7 X 10<sup>25</sup> KG
+        </li>
+        <li>
+          <h2>Rotation period:</h2> 17H 14M
+        </li>
+        <li>
+          <h2>Solar orbit:</h2> 84 years
+        </li>
+        <li>
+          <h2>Gravity:</h2> 8.7 M/S<sup>2</sup>
+        </li>
+        <li>
+          <h2>Surface temperature:</h2> -210 C
+        </li>
+      </ul>
+    </div>
+    <iframe src="planetInfo/uranusInfo.txt"></iframe>
+
+  </div>
+
+  <div id="neptuneInfo">
+    <strong>Neptune</strong>
+    <div id="facts">
+      <ul>
+        <li>
+          <h2>Diameter:</h2> 49 528 KM
+        </li>
+        <li>
+          <h2>Mass:</h2> 1.02 X 10<sup>26</sup> KG
+        </li>
+        <li>
+          <h2>Rotation period:</h2> 16H 06M
+        </li>
+        <li>
+          <h2>
+            <h2>Solar orbit:</h2>
+          </h2> 165 years
+        </li>
+        <li>
+          <h2>Gravity:</h2> 11.2 M/S<sup>2</sup>
+        </li>
+        <li>
+          <h2>Surface temperature:</h2> -200 C
+        </li>
+      </ul>
+    </div>
+    <iframe src="planetInfo/neptuneInfo.txt"></iframe>
+
+  </div>
+
+
+
+  <script src="./js/threex.domevents.js"></script>
+  <script type="module" language="javascript" src="./index.js"> </script>
+
+</body>
+
+</html>
